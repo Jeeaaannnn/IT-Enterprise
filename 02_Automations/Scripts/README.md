@@ -1,17 +1,21 @@
-# 🐚 System Scripts
-> *Repository degli script di manutenzione, gestione identity e automazione dell'infrastruttura.*
+# 🐚 Scripts | Manutenzione Sistemistica
+> *Strumenti di amministrazione proattiva per la salute dei server e la gestione dell'identità aziendale.*
 
-## 📌 Panoramica
-Questa sezione contiene gli strumenti "bassi" per la gestione del sistema. Utilizza principalmente **PowerShell** per l'ecosistema Windows (Hyper-V) e **Python** per task cross-platform.
+## 🛠️ Tecnologie Core
+Il modulo utilizza un approccio bilingue per massimizzare la compatibilità:
 
-## 🛠️ Ambiti di Intervento
-* **Gestione Identity:** Automazione della creazione/modifica utenti e auditing dei permessi.
-* **Log Management:** Script per la *log rotation* e la pulizia automatica dei file temporanei per garantire le performance dei server.
-* **Deploy Automatici:** Procedure per il rilascio controllato di patch, aggiornamenti e configurazioni software.
+### 🟦 PowerShell (Windows Ecosystem)
+* **Hyper-V Management:** Monitoraggio della salute dei nodi, gestione delle repliche e controllo quote disco.
+* **Active Directory:** Automazione del ciclo di vita degli utenti (Onboarding/Offboarding) e auditing dei permessi.
 
-## 💻 Tecnologie Utilizzate
-* **PowerShell:** Interazione diretta con Active Directory e nodi Hyper-V.
-* **Python:** Automazione di task sistemistici complessi e manipolazione file.
+### 🟨 Python (Cross-Platform)
+* **Data Processing:** Manipolazione rapida di file di log e conversione formati.
+* **Log Rotation:** Script per l'archiviazione e la pulizia automatica dei log di sistema per prevenire saturazioni di storage.
+
+## 📂 Organizzazione File
+* `/ps-modules`: Funzioni PowerShell riutilizzabili per l'amministrazione server.
+* `/py-tools`: Utility Python per l'elaborazione file e task di manutenzione.
+* `/logs`: Output delle esecuzioni (solo per debugging locale).
 
 ---
-*Manutenzione: Questi script assicurano che "Il Ferro" sia sempre efficiente e pulito.*
+> **Obiettivo:** Garantire che l'infrastruttura sia sempre "pulita", aggiornata e performante.

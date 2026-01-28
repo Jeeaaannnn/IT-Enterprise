@@ -1,19 +1,23 @@
-# 🌐 System Integrations
-> *Protocolli e connettori per lo scambio dati sicuro tra database e piattaforme business.*
+# 🔗 Integrations | Connettività e Scambio Dati
+> *Punto di accesso centralizzato per l'interscambio informativo tra l'ecosistema interno e gli stakeholder esterni.*
 
-## 📌 Panoramica
-Il modulo Integrations gestisce il flusso informativo tra sistemi eterogenei (IBM DB2, SQL Server, PrestaShop). È lo strato che permette al "Cuore" (Dati) di comunicare con "Il Business" (E-commerce).
+## 🛠️ Specifiche Tecniche
+Il modulo gestisce la comunicazione sicura attraverso due canali principali:
 
-## 🛠️ Protocolli di Scambio
-* **SFTP (Secure FTP):** Trasferimento protetto di file e flussi batch con partner esterni o server remoti.
-* **API (REST/SOAP):** Chiamate sincrone e asincrone per lo scambio dati dinamico.
-* **Data Mapping:** Logiche di trasformazione per garantire la coerenza tra sistemi con strutture dati diverse.
+### 📡 API Gateway (REST/SOAP)
+* **Finalità:** Scambio dati sincrono e real-time.
+* **Integrazioni:** Interfacciamento tra ERP aziendale e piattaforme terze (es. corrieri, gateway di pagamento).
+* **Standard:** Utilizzo rigoroso di protocolli **TLS 1.2+** e autenticazione tramite Header protetti.
 
+### 📁 SFTP Gateways
+* **Finalità:** Trasferimento massivo di file batch (XML, CSV, JSON).
+* **Esempi:** Flussi fatturazione elettronica, ordini fornitori e tracciati stock massivi.
+* **Sicurezza:** Autenticazione tramite chiavi SSH e crittografia dei dati in transito.
 
-
-## 🛡️ Standard di Sicurezza
-* **Crittografia:** Tutti i trasferimenti SFTP e le chiamate API utilizzano protocolli cifrati.
-* **Tracciabilità:** Ogni pacchetto dati scambiato viene loggato per garantire l'integrità del dato (CDC - Change Data Capture).
+## 📂 Organizzazione File
+* `/endpoints`: Definizione dei file di configurazione API.
+* `/keys`: Certificati e chiavi pubbliche (esclusi dal versionamento via `.gitignore`).
+* `/mapping`: Script di trasformazione per convertire i dati tra diversi formati.
 
 ---
-*Obiettivo: Garantire l'integrità dei dati tra il magazzino e il cliente finale.*
+> **Obiettivo:** Garantire una connettività fluida con latenza minima e sicurezza end-to-end.
